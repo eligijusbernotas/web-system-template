@@ -1,11 +1,11 @@
-# WEB system
+# AnimeReminder
 - [ ] Replace "WEB system" with your system name
 
 ## Description
-- [ ] Provide WEB system description in few sentences - its purpose, users, etc.
+- [ ] AnimeReminder is a web system that informs you about any new episodes of an anime that have come out. You can add any ongoing anime to a watch-list. It's targeted towards people that forget to check on weekly releases.
 
 ## Entity definition
-- [ ] Define the entity ("object" that will be manipulated) of WEB system
+- [ ] Entity - anime(mal_id(number), url(string), image_url(string), airing(boolean) title(min 3 characters, string, UTF8), synopsis(string), episodes(number 0-not specified), type(string, loc: tv ova movie special ona music manga novel oneshot doujin manhwa manhua), score(float, 0.0-10.0), satrt_date(ISO8601), end_date(ISO8601)
 - [ ] Entity should have a name
 - [ ] Entity should have 3 mandatory attributes:
     - [ ] ID - depending on specific service this could be a number or string
