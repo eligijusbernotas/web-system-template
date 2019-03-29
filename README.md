@@ -1,36 +1,18 @@
 # AnimeReminder
-- [ ] Replace "WEB system" with your system name
+
 
 ## Description
-- [ ] AnimeReminder is a web system that informs you about any new episodes of an anime that have come out. You can add any ongoing anime to a watch-list. It's targeted towards people that forget to check on weekly releases.
+AnimeReminder is a web system that informs you about any new episodes of an anime that have come out. You can add any ongoing anime to a watch-list. It's targeted towards people that forget to check on weekly releases.
 
 ## Entity definition
-- [ ] Entity - anime(mal_id(number), url(string), image_url(string), airing(boolean) title(min 3 characters, string, UTF8), synopsis(string), episodes(number 0-not specified), type(string, loc: tv ova movie special ona music manga novel oneshot doujin manhwa manhua), score(float, 0.0-10.0), satrt_date(ISO8601), end_date(ISO8601)
-- [ ] Entity should have a name
-- [ ] Entity should have 3 mandatory attributes:
-    - [ ] ID - depending on specific service this could be a number or string
-    - [ ] Creation date - (if applicable for specific service) ISO 8601 format date string
-    - [ ] Modification date - (if applicable for specific service) ISO 8601 format date string
-- [ ] Entity should have at least 5 custom attributes
-    - [ ] Each attribute should have a type defined: number, string, ISO 8601 date string, boolean, object, array or other
-    - [ ] Each attribute should have restrictions defined: list of constants, or number range, or string length, or string format, or object schema, or array schema or other. For example, you can use `joi` language to define restrictions: https://github.com/hapijs/joi/blob/v13.1.2/API.md
+Entity - anime(mal_id(number),broadcast(string), url(string), image_url(string), airing(boolean) title(min 3 characters, string, UTF8), synopsis(string), episodes(number 0-not specified), type(string, loc: tv ova movie special ona music manga novel oneshot doujin manhwa manhua), score(float, 0.0-10.0), satrt_date(ISO8601), end_date(ISO8601)
+
 
 ## API definition
-- [ ] Define specific service (konkrečios paslaugos) API methods that WEB system is going to use
-- [ ] Optionally define additional API methods that WEB system is going to expose
-- [ ] API should have at least 4 methods
-    - [ ] A method to return entity by ID. Should not have request body
-    - [ ] A method to return multiple entities (Array) by ID. This method should support at least one header value to:
-        - [ ] Return only entities that match pattern in one of its attributes
-        - [ ] Return 10 entities starting provided index
-        - [ ] Return sorted entities by one of its attributes (both ascending and descending)
-        - [ ] Other (should be approved by Product Owner (PO))
-    - [ ] A method to remove entity by ID. Returns removed entity. Should not have request body
-    - [ ] A method to update entity by ID. Accepts entity to update and returns updated entity
-- [ ] Each method should have HTTP method defined
-- [ ] Each method should have URI defined (use {id} as entity ID placeholder)
-- [ ] Should return all 4xx errors in unified format. Define format using `joi` language
-- [ ] Should return all 5xx errors in unified format. Define format using `joi` language
+GET /api.jikan.moe/v3/anime/{id}/ - returns an entity by ID
+GET /api.jikan.moe/v3/search/anime/?q={title}&page=1 - returns an entity by title
+GET /api.jikan.moe/v3/schedule/ - returns days of the week with multiple entities
+GET /api.jikan.moe/v3/anime/{id}/episodes - returns a list of episodes by entity's ID
 
 ## UI definition
 - [ ] Define the structure of how visually the WEB system is going to look like
