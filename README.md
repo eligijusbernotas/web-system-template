@@ -15,6 +15,7 @@ Jikan API methods:
 - GET /api.jikan.moe/v3/search/anime/?q={title}&page=1 - returns an entity by title
 - GET /api.jikan.moe/v3/schedule/ - returns days of the week with multiple entities
 - GET /api.jikan.moe/v3/anime/{id}/episodes - returns a list of episodes by entity's ID
+
 AnimeReminder methods:
 - POST /ar/anime/{mal_id} - adds anime to watchlist;
 - GET /ar/anime/{mal_id}/ - returns anime in watchlist by id/ returns all anime in the watchlist;
