@@ -43,8 +43,8 @@ body = {user:{
   recipes:[]
 }}; 
 HTTP response headers:
-200 OK - request was sucessful
-400 Bad request - ivalid request, wrong body or paramater.
+200 OK - request was sucessful;
+400 Bad request - ivalid request, wrong body or paramater;
 
 
 
